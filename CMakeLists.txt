@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 2.8)
 
 project(agron2)
 
-set(ARCHIVE_OUTPUT_DIRECTORY dist)
-set(LIBRARY_OUTPUT_DIRECTORY dist)
-set(RUNTIME_OUTPUT_DIRECTORY dist)
-set(EXECUTABLE_OUTPUT_PATH dist)
+add_definitions(-DARGON2_JS)
+
+set(ARCHIVE_OUTPUT_DIRECTORY generated)
+set(LIBRARY_OUTPUT_DIRECTORY generated)
+set(RUNTIME_OUTPUT_DIRECTORY generated)
+set(EXECUTABLE_OUTPUT_PATH generated)
 
 include_directories(argon2/include)
 
@@ -17,6 +19,8 @@ set(sources
     argon2/src/encoding.c
     argon2/src/ref.c
     argon2/src/thread.c
+
+    init.cc
 )
 
 add_executable(argon2 ${sources})

@@ -1,31 +1,24 @@
 {
-  "name": "argon2",
-  "version": "1.0.0",
-  "description": "Argon2 library compiled for browser runtime",
-  "main": "module/index.js",
+  "name": "argon2-wasm-anbang",
+  "version": "0.9.0",
+  "description": "Argon2 library compiled for WebAssembly runtime",
+  "main": "index.js",
   "directories": {
     "doc": "docs",
     "lib": "lib"
   },
   "scripts": {
-    "test": "mocha"
+    "prepublishOnly": "npm run-script build",
+    "build": "./build.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/canonchain/argon2-wasm.git"
+    "url": "git+https://github.com/urbit/argon2-wasm.git"
   },
-  "author": "Antelle",
+  "author": "Urbit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/canonchain/argon2-wasm/issues"
+    "url": "https://github.com/urbit/argon2-wasm/issues"
   },
-  "homepage": "https://github.com/canonchain/argon2-wasm#readme",
-  "devDependencies": {
-    "assert": "^2.0.0"
-  },
-  "dependencies": {
-    "eslint": "^6.3.0",
-    "env": "0.0.2",
-    "webassembly": "^0.11.0"
-  }
+  "homepage": "https://github.com/urbit/argon2-wasm#readme"
 }
