@@ -24,6 +24,7 @@
     "assert": "^2.0.0"
   },
   "dependencies": {
+    "eslint": "^6.3.0",
     "env": "0.0.2",
     "webassembly": "^0.11.0"
   }
